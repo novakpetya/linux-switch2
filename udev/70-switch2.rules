@@ -1,0 +1,23 @@
+# Nintendo Switch 2 Joy-Con (L) - direct USB/libusb access for SDL/Eden
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="057e", ATTR{idProduct}=="2067", MODE="0660", TAG+="uaccess"
+
+# Nintendo Switch 2 Joy-Con (R) - direct USB/libusb access for SDL/Eden
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="057e", ATTR{idProduct}=="2066", MODE="0660", TAG+="uaccess"
+
+
+# Nintendo Switch Joy-Con (L)
+# Also used by hid-switch2 for the JC1-compatible Joy-Con 2 (L) interface.
+SUBSYSTEM=="hidraw", KERNEL=="hidraw*", KERNELS=="*057E:2006*", MODE="0660", TAG+="uaccess"
+
+# Nintendo Switch Joy-Con (R)
+# Also used by hid-switch2 for the JC1-compatible Joy-Con 2 (R) interface.
+SUBSYSTEM=="hidraw", KERNEL=="hidraw*", KERNELS=="*057E:2007*", MODE="0660", TAG+="uaccess"
+
+# Nintendo Switch Pro Controller
+SUBSYSTEM=="hidraw", KERNEL=="hidraw*", KERNELS=="*057E:2009*", MODE="0660", TAG+="uaccess"
+
+# Nintendo Switch 2 Joy-Con (R)
+SUBSYSTEM=="hidraw", KERNEL=="hidraw*", KERNELS=="*057E:2066*", MODE="0660", TAG+="uaccess"
+
+# Nintendo Switch 2 Joy-Con (L)
+SUBSYSTEM=="hidraw", KERNEL=="hidraw*", KERNELS=="*057E:2067*", MODE="0660", TAG+="uaccess"

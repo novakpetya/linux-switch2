@@ -1,0 +1,33 @@
+# Kernel build output
+*.o
+*.ko
+*.ko.*
+*.mod
+*.mod.c
+*.mod.o
+*.cmd
+*.symvers
+*.order
+*.markers
+*.dwo
+*.su
+*.gcno
+*.gcda
+
+# Kbuild-generated directories/files
+.tmp_versions/
+Module.symvers
+modules.order
+.*.cmd
+
+# DKMS/local packaging output
+/dkms/
+/pkg/
+/src/
+*.pkg.tar.*
+
+# Editor/OS noise
+*~
+*.swp
+*.swo
+.DS_Store
